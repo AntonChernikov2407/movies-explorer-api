@@ -8,7 +8,7 @@ const routes = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
-const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/bitfilms' } = process.env;
+const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/bitfilmsdb' } = process.env;
 
 app.use(express.json());
 app.use(helmet());

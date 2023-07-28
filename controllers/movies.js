@@ -4,7 +4,7 @@ const NotFoundError = require('../errors/not-found-error');
 const ForbiddenError = require('../errors/forbidden-error');
 const ValidationError = require('../errors/validation-error');
 
-const getMovies = (req, res, next) => Movie.find({})
+const getMovies = (req, res, next) => Movie.find({ owner: req.user._id })
   .populate('owner')
   .then((data) => res.send(data))
   .catch(next);

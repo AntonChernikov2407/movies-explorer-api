@@ -43,7 +43,9 @@ const updateUserProfile = (req, res, next) => {
     .orFail(new NotFoundError('Запрашиваемый пользователь не найден'))
     .then((data) => res.send(data))
     .catch((err) => {
-      if (err instanceof mongoose.Error.ValidationError) {
+      if (err.code === 11000) {
+        next(new ConflictError('Пользователь с таким email уже существует'));
+      } else if (err instanceof mongoose.Error.ValidationError) {
         next(new ValidationError(err.message));
       } else {
         next(err);
