@@ -5,14 +5,13 @@
 Также выполнена обработка основых ошибок, применена валидация запросов.
 Стэк примененных технологий:
 1. Node.js
-2. Express
+2. Express.js
 3. MongoDB
 4. Mongoose
 
-Ссылка на репозиторий на GitHub Pages: https://antonchernikov2407.github.io/movies-explorer-api
 
-## Ссылка на проект
-
-IP 158.160.64.19
-
-Backend https://api.movie-explorer.nomoreparties.sbs
+### Инструкция по развертыванию:
+1. Скопировать репозиторий `git clone git@github.com:AntonChernikov2407/movies-explorer-api.git`
+2. Перейти в директорию проекта и установить зависимости `npm i`
+3. Запустить проект `npm run start`
+4. Запустить [frontend](https://github.com/AntonChernikov2407/movies-explorer-frontend)
